@@ -1,8 +1,8 @@
 services:
   web_add:
     build: .
-    image: appzeno-service-hub:latest
-    container_name: add-service-hub
+    image: add-exchange
+    container_name: add-exchange
     restart: unless-stopped
     env_file:
       - .env
