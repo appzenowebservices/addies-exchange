@@ -1,0 +1,169 @@
+/* src/components/layout/footer.css
+   Path: C:\xampp\htdocs\addies-exchange\src\components\layout\footer.css */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER WRAPPER
+═══════════════════════════════════════════════════════════════════════════ */
+.ae-footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: auto;
+}
+
+/* ── Top section ── */
+.ae-footer-top {
+  padding: 48px 20px 40px;
+}
+.ae-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  gap: 40px;
+}
+
+/* ── Columns ── */
+.ae-footer-col { display: flex; flex-direction: column; }
+.ae-footer-col-wide { }
+
+.ae-footer-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #2181c4;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* ── Link list ── */
+.ae-footer-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.ae-footer-link {
+  font-size: 13.5px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s;
+  line-height: 1.4;
+}
+.ae-footer-link:hover { color: #2181c4; }
+
+/* ── Categories header row ── */
+.ae-footer-cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.ae-footer-see-all {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: #2181c4;
+  padding: 0;
+  transition: color 0.15s;
+}
+.ae-footer-see-all:hover { color: #0d3557; }
+
+/* ── Categories 2-column grid ── */
+.ae-footer-cat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+.ae-footer-cat-link {
+  background: none; border: none; cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px; font-weight: 400;
+  color: #475569;
+  text-align: left;
+  padding: 0;
+  transition: color 0.15s;
+  line-height: 1.4;
+}
+.ae-footer-cat-link:hover { color: #2181c4; }
+
+/* ── Bottom bar ── */
+.ae-footer-bottom {
+  border-top: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  background: #f8fafc;
+}
+.ae-footer-bottom-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.ae-footer-logo {
+  display: flex; align-items: center; gap: 8px;
+}
+.ae-footer-logo-icon {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: linear-gradient(135deg, #1a5a85, #071e34);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 900;
+  color: white;
+}
+.ae-footer-logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; font-weight: 800; color: #0f172a;
+}
+.ae-footer-copy {
+  font-size: 12px; color: #94a3b8; margin: 0;
+  flex: 1;
+}
+.ae-footer-socials {
+  display: flex; gap: 8px;
+}
+.ae-footer-social-btn {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid #e2e8f0;
+  background: white; color: #64748b;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.18s;
+}
+.ae-footer-social-btn:hover {
+  border-color: #2181c4; color: #2181c4; background: #e0f0ff;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .ae-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .ae-footer-col-wide {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 600px) {
+  .ae-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .ae-footer-col-wide {
+    grid-column: unset;
+  }
+  .ae-footer-cat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ae-footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .ae-footer-copy { flex: none; }
+}

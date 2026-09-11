@@ -1,0 +1,118 @@
+/* src/components/auth/auth.css */
+
+.auth-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f4fd 0%, #dbeffe 40%, #c4dff8 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; position: relative; overflow: hidden;
+}
+
+.auth-blob {
+  position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none;
+}
+.auth-blob-1 { width: 400px; height: 400px; background: rgba(59,158,221,0.18); top: -100px; right: -100px; }
+.auth-blob-2 { width: 300px; height: 300px; background: rgba(33,129,196,0.12); bottom: -80px; left: -80px; }
+.auth-blob-3 { width: 200px; height: 200px; background: rgba(249,115,22,0.08); top: 50%; left: 20%; }
+
+.auth-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15,61,92,0.15), 0 0 0 1px rgba(59,158,221,0.08);
+  width: 100%; max-width: 460px;
+  overflow: hidden;
+  position: relative; z-index: 1;
+}
+
+.auth-brand {
+  display: flex; align-items: center; gap: 14px;
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.auth-logo {
+  width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(59,158,221,0.4);
+}
+.auth-logo span {
+  font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 800; color: white; letter-spacing: 1px;
+}
+.auth-brand-name {
+  font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 800;
+  color: var(--text-primary); line-height: 1;
+}
+.auth-brand-sub { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+
+/* ── Tabs ── */
+.auth-tabs {
+  display: flex; border-bottom: 2px solid var(--border);
+  padding: 0 28px;
+}
+.auth-tab {
+  flex: 1; padding: 14px; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 14px; font-weight: 600; color: var(--text-muted);
+  border-bottom: 2.5px solid transparent; margin-bottom: -2px; transition: all 0.22s;
+}
+.auth-tab.active { color: var(--primary-600); border-bottom-color: var(--primary-500); }
+
+/* ── Swipe forms ── */
+.auth-forms-wrap { overflow: hidden; }
+.auth-forms-track {
+  display: flex; width: 300%; transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.auth-forms-track.slide-register { transform: translateX(-33.333%); }
+.auth-forms-track.slide-forgot   { transform: translateX(-66.666%); }
+.auth-form-panel { width: 33.333%; flex-shrink: 0; padding: 24px 28px 28px; }
+
+/* ── Form rows ── */
+.auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 420px) { .auth-row { grid-template-columns: 1fr; } }
+
+.auth-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 16px; flex-wrap: wrap; gap: 8px;
+}
+.auth-link { font-size: 13px; font-weight: 600; color: var(--primary-600); cursor: pointer; background: none; border: none; font-family: inherit; text-decoration: none; }
+.auth-link:hover { color: var(--primary-700); text-decoration: underline; }
+
+.auth-divider { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+.auth-divider-line { flex: 1; height: 1px; background: var(--border); }
+.auth-divider-text { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+/* Role selector */
+.role-selector { display: flex; gap: 8px; }
+.role-btn {
+  flex: 1; padding: 10px 8px; border: 1.5px solid var(--border-dark); border-radius: var(--radius-md);
+  background: white; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 600;
+  color: var(--text-secondary); transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.role-btn .role-icon { font-size: 20px; }
+.role-btn.active {
+  border-color: var(--primary-500); background: var(--primary-50); color: var(--primary-700);
+  box-shadow: 0 0 0 3px rgba(59,158,221,0.12);
+}
+.role-btn:hover:not(.active) { border-color: var(--primary-300); }
+
+/* Back link */
+.back-link {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+  color: var(--text-secondary); cursor: pointer; background: none; border: none; font-family: inherit;
+  margin-bottom: 16px; padding: 0;
+}
+.back-link:hover { color: var(--primary-600); }
+
+/* Success state */
+.auth-success {
+  text-align: center; padding: 20px 0;
+}
+.auth-success-icon {
+  width: 64px; height: 64px; background: #dcfce7; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+  font-size: 28px;
+}
+
+/* Full-screen loader */
+.full-screen-loader {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; background: var(--bg-base);
+}
