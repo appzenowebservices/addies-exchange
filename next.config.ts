@@ -3,6 +3,7 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   /* Addies Exchange — T3 base + migrated Vite components */
+  output: "standalone",
   reactStrictMode: true,
   images: {
     domains: ["apnidesidukaan.com"],
